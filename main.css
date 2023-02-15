@@ -19,6 +19,7 @@ a:hover {
   text-decoration: underline;
 }
 
+
 /* Navigation Styles */
 .navbar {
   background-color: navy;
@@ -30,6 +31,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 1;
+  font-family: 'Lora', serif;
 }
 
 .navbar h1 {
@@ -59,6 +61,8 @@ a:hover {
   margin: 20px auto;
   max-width: 100%;
   height: auto;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Written Section Styles */
@@ -108,37 +112,74 @@ a:hover {
   color: #ffffff;
   margin-right: 10px;
 }
+.footer i:hover {
+    color: orangered;
+}
 
 /* Media Queries for Mobile Devices */
-@media only screen and (max-width: 600px) {
+
   /* Navigation Styles for Mobile Devices */
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
+  @media only screen and (max-width: 600px) {
+    .navbar {
+      background-color: navy;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+    }
+  
+    .navbar h1 {
+      font-size: 28px;
+      margin-left: 10px;
+    }
+  
+    .navbar i {
+      font-size: 32px;
+    }
+  
+    .navbar ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: navy;
+      text-align: center;
+      z-index: 1;
+    }
+  
+    .navbar li {
+      margin: 10px 0;
+    }
+  
+    .navbar a {
+      color: white;
+      text-decoration: none;
+    }
+  
+    .navbar .menu-icon {
+      display: block;
+    }
+  
+    .navbar .menu-icon i {
+      font-size: 32px;
+      cursor: pointer;
+    }
   }
-
-  .navbar h1 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .navbar ul {
-    margin-top: 10px;
-  }
-
-  .navbar li {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .menu-link {
-    font-size: 16px;
-  }
+  
 
   /* Hero Image Styles for Mobile Devices */
   .hero-pic {
-    margin: 10px 0;
+    margin: 150px 0;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
 
   /* Written Section Styles for Mobile Devices */
@@ -160,7 +201,7 @@ a:hover {
     font-size: 20px;
     margin-right: 0;
   }
-}
+
 
   /* Footer Styles for mobile devices*/
   @media only screen and (max-width: 600px) {
