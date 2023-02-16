@@ -55,6 +55,19 @@ a:hover {
   font-size: 18px;
 }
 
+.menu-link:hover {
+  color: orangered;
+}
+
+.menu-link:focus {
+  color: black;
+}
+
+.menu-link:active {
+  color: red;
+}
+
+
 /* Hero Image Styles */
 .hero-pic {
   display: block;
