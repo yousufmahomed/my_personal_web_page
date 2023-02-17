@@ -8,6 +8,8 @@ body {
   line-height: 1.5;
   color: #333333;
   background-color: #f8f8f8; /* Off-white background color */
+  border: 5px solid #800020;;
+  
 }
 
 a {
@@ -22,16 +24,18 @@ a:hover {
 
 /* Navigation Styles */
 .navbar {
-  background-color: navy;
-  color: #ffffff;
+  background-color: transparent;
+  border-bottom: #800020 2px groove;
+  color: #333333;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  position: sticky;
+  margin-bottom: 0%;
+  padding: 50px;
   top: 0;
   z-index: 1;
   font-family: 'Lora', serif;
+
 }
 
 .navbar h1 {
@@ -51,7 +55,7 @@ a:hover {
 }
 
 .menu-link {
-  color: #ffffff;
+  color: #333333;
   font-size: 18px;
 }
 
@@ -66,6 +70,10 @@ a:hover {
 .menu-link:active {
   color: red;
 }
+.fa-sharp.fa-solid.fa-stethoscope {
+  font-size: 2.5em;
+}
+
 
 
 /* Hero Image Styles */
@@ -74,7 +82,7 @@ header {
 }
 .hero-pic {
   display: inline-block;
-  margin: 20px auto;
+  margin: 0 auto 10px;
   max-width: 100%;
   height: auto;
   border-radius: 50%;
@@ -84,20 +92,26 @@ header {
 
 /* Written Section Styles */
 .written-section {
-  margin: 20px 0;
+  margin: 20px 0 0 ;
   padding: 0 10px;
   text-align: justify;
+  
+}
+h2 {
+  margin: 0 0 20px 20px;
 }
 
 .written-section p {
-  margin: 0 0 20px 0;
+  margin: 20px;
   line-height: 1.5;
+  
 }
+
 
 /* Contact List Styles */
 .contact-list {
   list-style: none;
-  margin: 0;
+  margin: 0 0 20px 20px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -110,23 +124,24 @@ header {
 
 .contact-list i {
   font-size: 24px;
-  color: navy;
+  color:  black;
   margin-right: 5px;
 }
 
 /* Footer Styles */
 .footer {
-  background-color: navy;
-  color: #ffffff;
+  background-color: transparent;
+  color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60px;
+  border-top: #800020 2px groove;
 }
 
 .footer i {
   font-size: 24px;
-  color: #ffffff;
+  color: #333333;
   margin-right: 10px;
 }
 .footer i:hover {
@@ -138,14 +153,14 @@ header {
   /* Navigation Styles for Mobile Devices */
   @media only screen and (max-width: 600px) {
     .navbar {
-      background-color: navy;
-      color: white;
+      background-color: transparent;
+      color: #333333;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 10px;
-      position: sticky;
       top: 0;
+      margin-bottom: 10px;
     }
   
     .navbar h1 {
@@ -167,7 +182,7 @@ header {
       top: 60px;
       left: 0;
       width: 100%;
-      background-color: navy;
+      background-color: transparent;
       text-align: center;
       z-index: 1;
     }
@@ -177,7 +192,7 @@ header {
     }
   
     .navbar a {
-      color: white;
+      color: #333333;
       text-decoration: none;
     }
   
@@ -188,6 +203,9 @@ header {
     .navbar .menu-icon i {
       font-size: 32px;
       cursor: pointer;
+    }
+    .fa-sharp.fa-solid.fa-stethoscope {
+      font-size: 0.9em;
     }
   }
   
@@ -223,8 +241,8 @@ header {
   /* Footer Styles for mobile devices*/
   @media only screen and (max-width: 600px) {
     .footer {
-      background-color: navy;
-      color: white;
+      background-color: transparent;
+      color: #333333;
       padding: 20px;
       display: flex;
       justify-content: space-around;
