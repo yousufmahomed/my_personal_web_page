@@ -13,7 +13,7 @@ body {
 }
 
 a {
-  color: #0077cc; /* Blue link color */
+  color: #333333; /* Blue link color */
   text-decoration: none;
 }
 
@@ -98,7 +98,14 @@ header {
   
 }
 h2 {
-  margin: 0 0 20px 20px;
+  margin: 0 10px 20px 20px;
+  font-size: 2em;
+  font-weight: bold;
+  color: #333333;
+  text-decoration: underline;
+  text-align: center;
+  font-family: 'Lora', serif;
+  padding: 20px;
 }
 
 .written-section p {
@@ -106,6 +113,14 @@ h2 {
   line-height: 1.5;
   
 }
+.written-section.written-start {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #800020;
+  text-decoration: underline;
+  font-family: 'Lora', serif;
+}
+
 
 
 /* Contact List Styles */
