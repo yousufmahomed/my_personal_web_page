@@ -13,12 +13,13 @@ body {
 }
 
 a {
-  color: #0077cc; /* Blue link color */
+  color: #333333; /* Dark grey link color */
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  color: orangered;
 }
 
 
@@ -40,7 +41,7 @@ a:hover {
 
 .navbar h1 {
   font-size: 24px;
-  margin: 0;
+  margin: 0 auto 0 60px;
 }
 
 .navbar ul {
@@ -98,7 +99,8 @@ header {
   
 }
 h2 {
-  margin: 0 0 20px 20px;
+  margin: 20px;
+  text-align: center;
 }
 
 .written-section p {
@@ -106,6 +108,13 @@ h2 {
   line-height: 1.5;
   
 }
+
+.written-section p::first-letter {
+  font-size: 1.2em;
+  font-family: 'Lora', serif;
+  color: burgundy;
+}
+
 
 
 /* Contact List Styles */
