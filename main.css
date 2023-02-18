@@ -131,6 +131,14 @@ h2 {
   color: burgundy;
 }
 
+.written-section i, .written-section img {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+
 
 
 /* Contact List Styles */
@@ -167,7 +175,7 @@ h2 {
 .footer i {
   font-size: 24px;
   color: #333333;
-  margin-right: 10px;
+  margin-right: 80px;
 }
 .footer i:hover {
     color: orangered;
