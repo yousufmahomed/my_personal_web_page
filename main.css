@@ -355,6 +355,58 @@ h3 {
       font-size: 24px;
     }
   }
+
+  .project-container {
+    padding: 10px 0;
+}
+
+.project-preview {
+    background: var(--card-bg); /* Uses your theme variable */
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: var(--shadow);
+}
+
+.status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #28a745; /* Green for "Active" */
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.project-highlights li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.project-highlights i {
+    color: var(--accent-color);
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.project-footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: #666;
+}
   
 
   
