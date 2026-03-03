@@ -94,12 +94,16 @@ body {
   width: 100%;
 }
 
-.hero-text-centered h1 {
+.hero-text h1, .hero-text-centered h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1.1;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   background: linear-gradient(to right, #fff, var(--accent));
-  -webkit-background-clip: text;
+  
+  /* The Fix: Include both the webkit and the standard property */
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  
   -webkit-text-fill-color: transparent;
 }
 
