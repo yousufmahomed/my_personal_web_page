@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Coordination CRM Architecture | Dr. Yousuf Mahomed</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid #0056b3;
+            margin-bottom: 40px;
+        }
+        h1 {
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            font-weight: 300;
+        }
+        .project-section {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h3 {
+            color: #0056b3;
+            margin-top: 25px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .highlight-box {
+            background-color: #eef2f5;
+            border-left: 4px solid #0056b3;
+            padding: 15px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+            font-size: 0.9em;
+            color: #777;
+        }
+        .tech-tag {
+            display: inline-block;
+            background: #0056b3;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sales Coordination CRM Architecture</h1>
+        <div class="subtitle">Implementing a Least Privilege Security Model in Salesforce</div>
+    </header>
+
+    <div class="project-section">
+        <h2>Project Overview</h2>
+        <p>This project demonstrates the architectural design and deployment of a custom Salesforce CRM focused on sales pipeline coordination. Rather than relying on out-of-the-box settings, the objective was to design a highly secure, scalable environment utilizing a "Least Privilege" data access model for a multi-tiered sales team consisting of Sales Managers, Sales Closers, and Appointment Setters.</p>
+        
+        <div>
+            <span class="tech-tag">Salesforce Administration</span>
+            <span class="tech-tag">Security & Visibility</span>
+            <span class="tech-tag">Data Governance</span>
+            <span class="tech-tag">Process Automation</span>
+        </div>
+    </div>
+
+    <div class="project-section">
+        <h2>The Architectural Thinking</h2>
+        
+        <div class="highlight-box">
+            "The core challenge of any enterprise CRM is balancing workflow efficiency with data security. This project proves that you can protect sensitive financial data while still providing a frictionless user interface for top-of-funnel staff."
+        </div>
+
+        <h3>1. Baseline Security & Role Hierarchy</h3>
+        <p>To ensure robust data protection, the baseline Organization-Wide Defaults (OWD) for Leads and Opportunities were locked down to <strong>Private</strong>. Access was then systematically opened vertically using a custom Role Hierarchy. This ensures that Sales Managers automatically inherit visibility into all subordinate records (Closers and Setters) without requiring complex sharing rules.</p>
+
+        <h3>2. Permission-Set-Led Field-Level Security (FLS)</h3>
+        <p>A modern Salesforce architecture relies less on profile-cloning and more on flexible permission sets. To achieve this:</p>
+        <ul>
+            <li>Created a unified <code>Custom: Base Sales User</code> profile for all frontline staff.</li>
+            <li>Built custom Opportunity fields for sensitive data (<em>Discount Amount, Incentive Details, Contract Terms, Final Quotation Price</em>).</li>
+            <li>Applied strict FLS during field creation to render these fields invisible to the Base Profile.</li>
+            <li>Engineered a <code>Sales Closer Privileges</code> Permission Set to explicitly grant read/edit access to these financial fields only to authorized Closers and Management.</li>
+        </ul>
+
+        <h3>3. Tailored Customer Journeys</h3>
+        <p>To optimize the user interface and prevent workflow confusion, I mapped out distinct lead pathways:</p>
+        <ul>
+            <li><strong>Custom Master Picklists:</strong> Established tailored Lead Statuses (e.g., "New - Cold List", "New - Inbound Inquiry", "Pending Closer Review").</li>
+            <li><strong>Lead Processes & Record Types:</strong> Created separate 'Inbound' and 'Outbound' Record Types. When an Appointment Setter creates a lead, they are guided down a specific path containing only the statuses relevant to their specific role, keeping the UI clean and foolproof.</li>
+        </ul>
+    </div>
+
+    <footer>
+        &copy; 2026 Dr. Yousuf Mahomed | Health-Tech Innovator | Newcastle, South Africa
+    </footer>
+
+</body>
+</html>
