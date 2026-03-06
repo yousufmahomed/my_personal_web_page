@@ -13,8 +13,12 @@
         <div class="nav-container">
             <a href="index.html" class="logo">Dr. Yousuf Mahomed</a>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html" class="active">Projects</a></li>
+                <li><a href="Medical_career.html">Medical Career</a></li>
+                <li><a href="salesforce.html" class="active">Salesforce</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="resume.html" class="btn-cta">Resume</a></li>
+                <li><a href="caseStudyRoster.html" class="btn-cta">Case Study</a></li>
+                <li><a href="insights.html">Insights</a></li>
             </ul>
         </div>
     </nav>
@@ -23,7 +27,7 @@
         <div class="hero-text-centered">
             <h1>Sales Coordination <br><span class="highlight">CRM Architecture</span></h1>
             <p style="color: var(--text-secondary); font-size: 1.2rem; max-width: 600px; margin: 0 auto; margin-top: 1rem;">
-                Implementing a Least Privilege Security Model in Salesforce
+                Implementing a Least Privilege Security Model & Intelligent Automation
             </p>
         </div>
     </header>
@@ -32,69 +36,68 @@
         
         <section class="resume-section">
             <h2 class="section-title">Project Overview</h2>
+            <div style="text-align: center;">
+                    <img src="/images/main org.jpg" alt="Validation Rule Logic" class="hero-img-small">
+                </div>
             <div class="glass-card">
-                <p>This project demonstrates the architectural design and deployment of a custom Salesforce CRM focused on sales pipeline coordination. Rather than relying on out-of-the-box settings, the objective was to design a highly secure, scalable environment utilizing a "Least Privilege" data access model for a multi-tiered sales team consisting of Sales Managers, Sales Closers, and Appointment Setters.</p>
+                <p>This project demonstrates the architectural design of a custom Salesforce CRM for high-end auto shop sales. The objective was to design a secure environment utilizing a <strong>"Least Privilege"</strong> data model while automating the hand-off process between Appointment Setters and Sales Closers.</p>
                 
                 <div class="skill-tags" style="margin-top: 2rem;">
-                    <span>Salesforce Administration</span>
+                    <span>Salesforce Flow Builder</span>
                     <span>Security & Visibility</span>
                     <span>Data Governance</span>
-                    <span>Process Automation</span>
+                    <span>Permission Sets</span>
                     <span>Validation Rules</span>
                 </div>
             </div>
         </section>
 
         <section class="resume-section">
-            <h2 class="section-title">The Architectural Thinking</h2>
-            <div class="glass-card" style="text-align: left;">
+            <h2 class="section-title">Automation Intelligence</h2>
+            <div class="glass-card">
+                <p style="margin-bottom: 2rem; color: var(--text-secondary);">
+                    To bridge the gap between security and efficiency, I engineered a <strong>Record-Triggered Flow</strong> that manages the lead hand-off. When a setter marks a lead for review, the system automatically identifies the owner and fires a real-time push notification.
+                </p>
                 
-                <div style="background: rgba(0, 242, 254, 0.05); border-left: 4px solid var(--accent); padding: 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0; font-style: italic; color: var(--text-primary);">
-                    "The core challenge of any enterprise CRM is balancing workflow efficiency with data security. This project proves that you can protect sensitive financial data while still providing a frictionless user interface for top-of-funnel staff."
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="/images/lead handoff flow .jpg" alt="Salesforce Flow Logic Canvas" class="hero-img-small" style="max-width: 800px;">
+                    <h4 style="color: var(--accent); margin-top: 1rem;">Architecting the Logic</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); max-width: 650px; margin-bottom: 2rem;">
+                        <strong>Process:</strong> The Flow triggers when a Lead Status changes to 'Pending Closer Review'. It retrieves the Custom Notification metadata, assigns the Recipient ID (Record Owner), and executes the push action with a deep-link to the record.
+                    </p>
+                    
+                    <img src="/images/lead pipeline.jpg" alt="Lead Status Path" class="hero-img-small" style="max-width: 800px;">
+                    <p class="caption">The Front-End: Custom Lead Path with the 'Pending Closer Review' stage successfully integrated.</p>
                 </div>
-
-                <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.3rem;">1. Baseline Security & Role Hierarchy</h3>
-                <p style="margin-bottom: 2rem; color: var(--text-secondary);">To ensure robust data protection, the baseline Organization-Wide Defaults (OWD) for Leads and Opportunities were locked down to <strong>Private</strong>. Access was then systematically opened vertically using a custom Role Hierarchy. This ensures that Sales Managers automatically inherit visibility into all subordinate records without requiring complex sharing rules.</p>
-
-                <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.3rem;">2. Permission-Set-Led Field-Level Security (FLS)</h3>
-                <p style="margin-bottom: 1rem; color: var(--text-secondary);">A modern Salesforce architecture relies less on profile-cloning and more on flexible permission sets. To achieve this:</p>
-                <ul style="padding-left: 1.5rem; margin-bottom: 2rem; color: var(--text-secondary);">
-                    <li style="margin-bottom: 0.5rem;">Created a unified <code>Custom: Base Sales User</code> profile for all frontline staff.</li>
-                    <li style="margin-bottom: 0.5rem;">Built custom Opportunity fields for sensitive data (<em>Discount Amount, Incentive Details, Contract Terms, Final Quotation Price</em>).</li>
-                    <li style="margin-bottom: 0.5rem;">Applied strict FLS during field creation to render these fields invisible to the Base Profile.</li>
-                    <li style="margin-bottom: 0.5rem;">Engineered a <code>Sales Closer Privileges</code> Permission Set to explicitly grant read/edit access to these financial fields only to authorized Closers and Management.</li>
-                </ul>
-
-                <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.3rem;">3. Process Governance (Validation Rules)</h3>
-                <p style="color: var(--text-secondary);">To prevent top-of-funnel users from bypassing standard operating procedures, I implemented a role-based Validation Rule. Appointment Setters are physically blocked by the system from moving a Lead to a "Closed" status, ensuring all hand-offs go through a Sales Closer for final review.</p>
             </div>
         </section>
 
         <section class="resume-section">
-            <h2 class="section-title">Architecture Showcase</h2>
-            <div class="glass-card">
-                <p style="margin-bottom: 2.5rem; color: var(--text-secondary);">Below are demonstrations of the customized security and governance controls actively protecting records in the production environment.</p>
-
-                <h3 style="color: var(--accent); margin-bottom: 1.5rem; font-size: 1.3rem;">Field-Level Security in Action</h3>
+            <h2 class="section-title">Security & Governance</h2>
+            <div class="glass-card" style="text-align: left;">
                 
-                <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-bottom: 4rem;">
-                    <div style="flex: 1; min-width: 280px;">
-                        <img src="images/setter-view.png" alt="Appointment Setter View" class="hero-img-small">
-                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Appointment Setter View</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Financial and incentive fields are completely hidden from the UI.</p>
-                    </div>
-                    <div style="flex: 1; min-width: 280px;">
-                        <img src="images/closer-view.png" alt="Sales Closer View" class="hero-img-small">
-                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Sales Closer View</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Permission Set grants visibility to the discount and custom decal incentives.</p>
-                    </div>
+                <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.3rem;">1. Role-Based Permission Sets</h3>
+                <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">
+                    Financial fields like <em>Final Quotation Price</em> and <em>Discount Amount</em> are hidden at the profile level. Access is granted exclusively to "Sales Closers" via custom Permission Sets, ensuring sensitive margin data remains protected.
+                </p>
+                
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <img src="/images/lead status picklist.jpg" alt="Permission Set Configuration" class="hero-img-small">
+                    <p class="caption">Adjustment of picklist to cater to cold and hot leads</p>
                 </div>
 
-                <h3 style="color: var(--accent); margin-bottom: 1.5rem; font-size: 1.3rem;">System Guardrails</h3>
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src="images/validation-rule-error.png" alt="Validation Rule Error Message" class="hero-img-small" style="max-width: 700px;">
-                    <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; margin-top: 1rem;">Process Validation</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">The system actively blocks an Appointment Setter from attempting to close the John Smith lead without authorization.</p>
+                <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.3rem;">2. Process Guardrails</h3>
+                <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">
+                    <div style="text-align: center;">
+                    <img src="/images/dicount application.jpg" alt="Validation Rule Logic" class="hero-img-small">
+                    <p class="caption">Application of discounts as authorized by sales manager and not appointment setters</p>
+                </div>
+                    To enforce data integrity, a Validation Rule prevents Appointment Setters from bypassing the hand-off process. This ensures all high-value builds are reviewed by a manager before being finalized.
+                </p>
+
+                <div style="text-align: center;">
+                    <img src="/images/custom notifications.jpg" alt="Validation Rule Logic" class="hero-img-small">
+                    <p class="caption">Development of custom notifications for use in flow path.</p>
                 </div>
             </div>
         </section>
@@ -106,7 +109,7 @@
     </main>
 
     <footer class="footer">
-        <p style="color: var(--text-secondary);">&copy; 2026 Dr. Yousuf Mahomed | Health-Tech Innovator | Newcastle, South Africa</p>
+        <p style="color: var(--text-secondary);">&copy; 2026 Dr. Yousuf Mahomed | Newcastle, South Africa</p>
     </footer>
 
 </body>
