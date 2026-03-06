@@ -18,14 +18,22 @@
                 <i class="fa-solid fa-stethoscope"></i> 
                 <span>Dr. Yousuf Mahomed</span>
             </a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Medical_career.html">Medical Career</a></li>
                 <li><a href="salesforce.html">Salesforce</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
-                 <li><a href="caseStudyRoster.html" class="btn-cta">Case Study</a></li>
-                  <li><a href="insights.html" class="active">Insights</a></li>
-                    <li><a href="sales-crm-project.html" class="active">Project</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="caseStudyRoster.html" class="btn-cta">Case Study</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                 <li><a href="sales-crm-project.html">Current Project</a></li>
             </ul>
         </div>
     </nav>
@@ -65,26 +73,26 @@
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="time-point">2015 — Present</div>
-                            <div class="timeline-content">
+                            <div class="timeline-content glass-card">
                                 <h3>HOD Emergency Dept / Clinical Manager</h3>
-                                <span class="location" style="color: var(--accent-alt);">Madadeni Provincial Hospital</span>
-                                <p>Leading digital transformation within the department, utilizing technology to improve clinical teaching, patient tracking, and operational efficiency.</p>
+                                <span class="location" style="color: var(--accent);">Madadeni Provincial Hospital</span>
+                                <p style="margin-top: 0.5rem;">Leading digital transformation within the department, utilizing technology to improve clinical teaching, patient tracking, and operational efficiency.</p>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="time-point">2006 — 2015</div>
-                            <div class="timeline-content">
+                            <div class="timeline-content glass-card">
                                 <h3>Medical Doctor / GP</h3>
-                                <span class="location" style="color: var(--accent-alt);">Private Practice, Springs</span>
-                                <p>Managed all aspects of a clinical practice, focusing on patient relationship management and comprehensive primary care.</p>
+                                <span class="location" style="color: var(--accent);">Private Practice, Springs</span>
+                                <p style="margin-top: 0.5rem;">Managed all aspects of a clinical practice, focusing on patient relationship management and comprehensive primary care.</p>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="time-point">2003 — 2005</div>
-                            <div class="timeline-content">
+                            <div class="timeline-content glass-card">
                                 <h3>Medical Officer & Internship</h3>
-                                <span class="location" style="color: var(--accent-alt);">Pholosong & George Hospitals</span>
-                                <p>Rotational clinical expertise in General Surgery, Orthopedics, and Neonatal ICU.</p>
+                                <span class="location" style="color: var(--accent);">Pholosong & George Hospitals</span>
+                                <p style="margin-top: 0.5rem;">Rotational clinical expertise in General Surgery, Orthopedics, and Neonatal ICU.</p>
                             </div>
                         </div>
                     </div>
@@ -100,18 +108,18 @@
             <aside class="resume-sidebar">
                 <section class="sidebar-block glass-card" style="margin-bottom: 2rem;">
                     <h3>Certifications</h3>
-                    <ul class="cert-list" style="list-style: none; padding: 0; text-align: left;">
-                        <li><strong>Salesforce</strong> Certified Admin</li>
-                        <li><strong>Platform App Builder</strong> (Udemy)</li>
-                        <li><strong>JS Algorithms</strong> (freeCodeCamp)</li>
-                        <li><strong>Responsive Web Design</strong> (fCC)</li>
-                        <li><strong>Learn Enough:</strong> HTML, CSS, JS, Git, CLI</li>
+                    <ul class="cert-list" style="list-style: none; padding: 0; text-align: left; line-height: 1.8;">
+                        <li><i class="fa-solid fa-certificate" style="color: var(--accent); font-size: 0.8rem;"></i> <strong>Salesforce</strong> Certified Admin</li>
+                        <li><i class="fa-solid fa-certificate" style="color: var(--accent); font-size: 0.8rem;"></i> <strong>Platform App Builder</strong> (Udemy)</li>
+                        <li><i class="fa-solid fa-certificate" style="color: var(--accent); font-size: 0.8rem;"></i> <strong>JS Algorithms</strong> (fCC)</li>
+                        <li><i class="fa-solid fa-certificate" style="color: var(--accent); font-size: 0.8rem;"></i> <strong>Responsive Web Design</strong> (fCC)</li>
+                        <li><i class="fa-solid fa-certificate" style="color: var(--accent); font-size: 0.8rem;"></i> <strong>Learn Enough</strong> Series</li>
                     </ul>
                 </section>
 
                 <section class="sidebar-block glass-card" style="margin-bottom: 2rem;">
                     <h3>Technical Skills</h3>
-                    <div class="skill-tags">
+                    <div class="skill-tags" style="justify-content: flex-start;">
                         <span>Salesforce Lightning</span>
                         <span>Flow Builder</span>
                         <span>HTML/CSS</span>
@@ -122,7 +130,7 @@
 
                 <section class="sidebar-block glass-card">
                     <h3>Interests</h3>
-                    <div class="hobby-tags">
+                    <div class="hobby-tags" style="justify-content: flex-start;">
                         <span>Cycling</span>
                         <span>Anime & Manga</span>
                         <span>History</span>
@@ -145,6 +153,27 @@
             <p>&copy; 2026 Dr. Yousuf Mahomed | Newcastle, South Africa</p>
         </div>
     </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.querySelector('#mobile-menu');
+        const navList = document.querySelector('.nav-links');
+
+        if (menuBtn) {
+            menuBtn.onclick = () => {
+                menuBtn.classList.toggle('active');
+                navList.classList.toggle('active');
+            };
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.onclick = () => {
+                menuBtn.classList.remove('active');
+                navList.classList.remove('active');
+            };
+        });
+    });
+    </script>
 
 </body>
 </html>

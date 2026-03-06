@@ -18,14 +18,22 @@
                 <i class="fa-solid fa-stethoscope"></i> 
                 <span>Dr. Yousuf Mahomed</span>
             </a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Medical_career.html">Medical Career</a></li>
                 <li><a href="salesforce.html">Salesforce</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
                 <li><a href="resume.html">Resume</a></li>
-                 <li><a href="caseStudyRoster.html" class="btn-cta">Case Study</a></li>
-                  <li><a href="insights.html" class="active">Insights</a></li>
-                    <li><a href="sales-crm-project.html" class="active">Project</a></li>
+                <li><a href="caseStudyRoster.html" class="btn-cta">Case Study</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                 <li><a href="sales-crm-project.html">Current Project</a></li>
             </ul>
         </div>
     </nav>
@@ -48,21 +56,21 @@
 
                 <section class="resume-section">
                     <h2 class="section-title">In Development</h2>
-                    <div class="glass-card spotlight-card">
-                        <span class="badge badge-featured">Active Build</span>
-                        <h3>Salesforce-Integrated Appointment Engine</h3>
-                        <p class="profile-summary">
+                    <div class="glass-card" style="border: 2px solid var(--accent); position: relative; overflow: hidden;">
+                        <span class="badge" style="position: absolute; top: 1rem; right: 1rem; background: var(--accent); color: var(--bg-dark); font-weight: bold; padding: 4px 12px; border-radius: 5px;">Active Build</span>
+                        
+                        <h3 style="margin-top: 1rem;">Salesforce-Integrated Appointment Engine</h3>
+                        <p class="profile-summary" style="margin-top: 1.5rem;">
                             Bridging the gap between high-performance front-end design and Enterprise Resource Planning (ERP). Following the successful deployment of the Madadeni Hospital Roster System, I am currently engineering a <strong>Smart Lead Conversion Engine</strong>.
                         </p>
-                        
-                        
                         
                         <div class="skill-tags" style="justify-content: center; margin-top: 1.5rem;">
                             <span><i class="fa-solid fa-cloud"></i> Web-to-Lead Automation</span>
                             <span><i class="fa-solid fa-calendar-check"></i> SDR Coordination</span>
                             <span><i class="fa-solid fa-robot"></i> Agentforce Principles</span>
                         </div>
-                        <p class="project-footer" style="margin-top: 1.5rem; font-style: italic; color: var(--text-secondary);">
+                        
+                        <p class="project-footer" style="margin-top: 1.5rem; font-style: italic; color: var(--text-secondary); font-size: 0.9rem;">
                             Goal: To demonstrate how modern front-end engineering can drive revenue and operational efficiency in a corporate sales environment.
                         </p>
                     </div>
@@ -72,13 +80,13 @@
                     <h2 class="section-title">Clinical Web Applications</h2>
                     
                     <div class="glass-card" style="margin-bottom: 2rem;">
-                        <img src="/images/learning group updated.jpg" alt="Learning Group" class="hero-img-small" style="margin-bottom: 1.5rem;">
-                        <h3>Accident & Emergency Department Learning Group</h3>
-                        <p class="profile-summary">
-                            Developed to assist doctors under my leadership with accessing tutorials and presentations. It categorizes tutorials into relevant sections and includes our Twitter feed and essential documents for clinical practice. 
+                        <img src="/images/learning group updated.jpg" alt="Learning Group" class="hero-img-small">
+                        <h3>Accident & Emergency Learning Group</h3>
+                        <p class="profile-summary" style="margin-top: 1rem;">
+                            Developed to assist doctors under my leadership with accessing tutorials and presentations. It categorizes tutorials into relevant sections and includes essential documents for clinical practice. 
                         </p>
-                        <p class="profile-summary">
-                            It currently has a membership of over <strong>400 doctors and students</strong> from across the globe and is constantly growing. It serves as a comprehensive showcase of my public speaking, leadership, and training capabilities.
+                        <p class="profile-summary" style="margin-top: 1rem;">
+                            It currently serves over <strong>400 doctors and students</strong> globally, showcasing my public speaking, leadership, and training capabilities.
                         </p>
                         <div class="resume-actions-centered">
                             <a href="https://jazzy-fox-934d99.netlify.app" class="btn-primary-sm" target="_blank">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
@@ -86,13 +94,10 @@
                     </div>
 
                     <div class="glass-card" style="margin-bottom: 2rem;">
-                        <img src="/images/ed assistant updated.jpg" alt="ED Assistant" class="hero-img-small" style="margin-bottom: 1.5rem;">
+                        <img src="/images/ed assistant updated.jpg" alt="ED Assistant" class="hero-img-small">
                         <h3>Emergency Department Assistant</h3>
-                        <p class="profile-summary">
+                        <p class="profile-summary" style="margin-top: 1rem;">
                             Engineered to support new doctors and students exposed to an emergency department for the first time. It provides comprehensive guides to clinical assessments alongside advanced diagnostic calculators.
-                        </p>
-                        <p class="profile-summary">
-                            This is an expansive project in active use by the same cohort of doctors within the learning group. I encourage visiting the project to witness the full scope and technical depth of the build.
                         </p>
                         <div class="resume-actions-centered">
                             <a href="https://edassistant.netlify.app" class="btn-primary-sm" target="_blank">Launch App <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
@@ -100,13 +105,13 @@
                     </div>
 
                     <div class="glass-card">
-                        <img src="/images/mph rosters updated.jpg" alt="Roster System" class="hero-img-small" style="margin-bottom: 1.5rem;">
+                        <img src="/images/mph rosters updated.jpg" alt="Roster System" class="hero-img-small">
                         <h3>Roster Management System</h3>
-                        <p class="profile-summary">
+                        <p class="profile-summary" style="margin-top: 1rem;">
                             Designed to digitize monthly hospital rosters, allowing for real-time adjustments and district-wide visibility for clinical staff. 
                         </p>
-                        <p class="profile-summary">
-                            <em>Note: This is currently a mock system under review by management, utilizing placeholder names and contact details to demonstrate operational utility.</em>
+                        <p class="profile-summary" style="margin-top: 1rem; font-size: 0.9rem; font-style: italic; color: var(--text-secondary);">
+                            Note: This system utilizes placeholder data to demonstrate operational utility during review.
                         </p>
                         <div class="resume-actions-centered">
                             <a href="https://rosterproject.netlify.app" class="btn-primary-sm" target="_blank">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
@@ -115,12 +120,12 @@
                 </section>
 
                 <section class="resume-section">
-                    <h2 class="section-title">Mike Wheeler Career Accelerator</h2>
+                    <h2 class="section-title">Salesforce Career Accelerator</h2>
                     <div class="glass-card">
-                        <img src="/images/salesforce career launch accelerator completion MWM.jpg" alt="Salesforce Accelerator" class="hero-img-small" style="margin-bottom: 1.5rem;">
+                        <img src="/images/salesforce career launch accelerator completion MWM.jpg" alt="Salesforce Accelerator" class="hero-img-small">
                         <h3>Salesforce Application Suite</h3>
-                        <p class="profile-summary">During this certification course, I developed three integrated Salesforce applications:</p>
-                        <ul class="contact-list" style="text-align: left; align-items: flex-start; margin-top: 1rem;">
+                        <p class="profile-summary" style="margin-top: 1rem;">During this intensive certification course, I developed three integrated Salesforce applications:</p>
+                        <ul style="text-align: left; margin: 1.5rem auto 0; max-width: 500px; color: var(--text-secondary); line-height: 1.8;">
                             <li><strong>Resume Management:</strong> Tracks multi-version resume submissions tailored to specific roles.</li>
                             <li><strong>Jobs App:</strong> Centralized management of job leads and market opportunities.</li>
                             <li><strong>Recruiter CRM:</strong> Categorizes recruiters and maps them to active job pipelines.</li>
@@ -133,17 +138,33 @@
     </main>
 
     <footer class="footer">
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="mailto:yousufmahomed@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://wa.me/+27824949750" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="https://github.com/yousufmahomed" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/yousuf-mahomed-3b915a40" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://trailblazer.me/id/ymahomed1" target="_blank"><i class="fa-brands fa-salesforce"></i></a>
-            </div>
-            <p>&copy; 2026 Dr. Yousuf Mahomed | Newcastle, South Africa</p>
+        <div class="social-links">
+            <a href="mailto:yousufmahomed@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/yousufmahomed" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/yousuf-mahomed-3b915a40" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         </div>
+        <p style="color: var(--text-secondary); margin-top: 1rem;">&copy; 2026 Dr. Yousuf Mahomed | Newcastle, South Africa</p>
     </footer>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.querySelector('#mobile-menu');
+        const navList = document.querySelector('.nav-links');
+
+        if (menuBtn) {
+            menuBtn.onclick = () => {
+                menuBtn.classList.toggle('active');
+                navList.classList.toggle('active');
+            };
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.onclick = () => {
+                menuBtn.classList.remove('active');
+                navList.classList.remove('active');
+            };
+        });
+    });
+    </script>
 </body>
 </html>

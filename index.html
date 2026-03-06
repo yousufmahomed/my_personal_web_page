@@ -18,14 +18,22 @@
                 <i class="fa-solid fa-stethoscope"></i> 
                 <span>Dr. Yousuf Mahomed</span>
             </a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="Medical_career.html">Medical Career</a></li>
                 <li><a href="salesforce.html">Salesforce</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="resume.html" class="btn-cta">Resume</a></li>
-                <li><a href="caseStudyRoster.html" class="btn-cta">Case Study</a></li>
-                 <li><a href="insights.html" class="active">Insights</a></li>
-                  <li><a href="sales-crm-project.html" class="active">Project</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="caseStudyRoster.html" class=>Case Study</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                <li><a href="sales-crm-project.html">Current Project</a></li>
             </ul>
         </div>
     </nav>
@@ -54,12 +62,10 @@
                     <p class="profile-summary">
                         I am a medical doctor currently serving as the Head of Department of Emergency Medicine at Madadeni Regional Hospital. With over 20 years of clinical practice, I have developed a deep passion for using technology to revolutionize patient care and physician education.
                     </p>
-                    <p class="profile-summary">
+                    <p class="profile-summary" style="margin-top: 1rem;">
                         As a <strong>Certified Salesforce Administrator</strong> and <strong>Trailhead Ranger</strong>, I believe the future of medicine is in the cloud. I combine my practical medical knowledge with technical sophistication in responsive web design, JavaScript, and CRM architecture to solve complex healthcare challenges.
                     </p>
                 </section>
-
-                
 
                 <section class="resume-section glass-card" style="margin-top: 2rem;">
                     <h2 class="section-title">The Vision</h2>
@@ -71,10 +77,10 @@
                 <section class="resume-section">
                     <h2 class="section-title">Connect With Me</h2>
                     <div class="contact-links-centered">
-                        <ul class="contact-list">
-                            <li><i class="fa-solid fa-envelope"></i> yousufmahomed@gmail.com</li>
-                            <li><i class="fa-brands fa-whatsapp"></i> +27 (82) 494 9750</li>
-                            <li><i class="fa-solid fa-phone"></i> +27 (82) 494 9750</li>
+                        <ul class="contact-list" style="list-style: none; padding: 0;">
+                            <li><i class="fa-solid fa-envelope" style="color: var(--accent);"></i> yousufmahomed@gmail.com</li>
+                            <li><i class="fa-brands fa-whatsapp" style="color: var(--accent);"></i> +27 (82) 494 9750</li>
+                            <li><i class="fa-solid fa-phone" style="color: var(--accent);"></i> +27 (82) 494 9750</li>
                         </ul>
                     </div>
                 </section>
@@ -95,6 +101,27 @@
             <p>&copy; 2026 Dr. Yousuf Mahomed | Newcastle, South Africa</p>
         </div>
     </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.querySelector('#mobile-menu');
+        const navList = document.querySelector('.nav-links');
+
+        if (menuBtn) {
+            menuBtn.onclick = () => {
+                menuBtn.classList.toggle('active');
+                navList.classList.toggle('active');
+            };
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.onclick = () => {
+                menuBtn.classList.remove('active');
+                navList.classList.remove('active');
+            };
+        });
+    });
+    </script>
 
 </body>
 </html>

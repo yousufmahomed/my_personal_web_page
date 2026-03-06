@@ -18,14 +18,22 @@
                 <i class="fa-solid fa-stethoscope"></i> 
                 <span>Dr. Yousuf Mahomed</span>
             </a>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Medical_career.html">Medical Career</a></li>
+                <li><a href="salesforce.html" class="active">Salesforce</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="resume.html">Resume</a></li>
-                 <li><a href="caseStudyRoster.html" class="btn-cta">Case Study</a></li>
-                  <li><a href="insights.html" class="active">Insights</a></li>
-                  <li><a href="sales-crm-project.html" class="active">Project</a></li>
+                <li><a href="caseStudyRoster.html" class="btn-cta">Case Study</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                 <li><a href="sales-crm-project.html">Current Project</a></li>
             </ul>
         </div>
     </nav>
@@ -51,7 +59,7 @@
                     <p class="profile-summary">
                         I am a firm believer that the future of medicine is in the cloud. Medicine shares many core elements with <strong>Customer (Patient) Relationship Management</strong>. 
                     </p>
-                    <p class="profile-summary">
+                    <p class="profile-summary" style="margin-top: 1rem;">
                         In a clinical setting, we treat patients as leads, admissions as opportunities, and recovery as successful case management. By contributing to provincial E-Health initiatives and mastering Salesforce, I am bridging the gap between clinical practice and technical innovation.
                     </p>
                 </section>
@@ -61,24 +69,76 @@
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="time-point">Feb 2023 — Present</div>
-                            <div class="timeline-content">
+                            <div class="timeline-content glass-card">
                                 <h3>Certified Administrator & Future Architect</h3>
                                 <p>Successfully passed the <strong>Salesforce Administrator Exam</strong>. Currently studying for the Platform App Builder certification and mastering Superbadges to deepen platform expertise.</p>
                             </div>
                         </div>
+
                         <div class="timeline-item">
                             <div class="time-point">2022 — Early 2023</div>
-                            <div class="timeline-content">
+                            <div class="timeline-content glass-card">
                                 <h3>The Learning Phase</h3>
                                 <p>Completed the <strong>Mike Wheeler Career Launch Accelerator</strong>. Gained proficiency in front-end development through freeCodeCamp, The Odin Project, and the Learn Enough series.</p>
                                 <div class="skill-tags" style="justify-content: center; margin-top: 1rem;">
                                     <span>HTML5/CSS3</span>
                                     <span>JavaScript</span>
                                     <span>Git/CLI</span>
-                                    <span>VIM</span>
+                                    <span>Salesforce Admin</span>
                                 </div>
                             </div>
                         </div>
+
                         <div class="timeline-item">
                             <div class="time-point">June 2022</div>
-                            <div class="timeline-
+                            <div class="timeline-content glass-card">
+                                <h3>The Digital Awakening</h3>
+                                <p>Identified the critical need for interoperable health data systems during frontline clinical practice. This sparked the journey into the Salesforce ecosystem to find scalable solutions for data silos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="resume-section">
+                    <h2 class="section-title">Featured Ecosystem Project</h2>
+                    <div class="glass-card">
+                        <h3>Sales Coordination CRM Architecture</h3>
+                        <p style="margin: 1rem 0;">A custom-built Salesforce environment implementing Least Privilege security and automated lead hand-off logic.</p>
+                        <a href="sales-crm-project.html" class="btn-primary-sm">View Architecture Study</a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <div class="resume-actions-centered">
+            <a href="portfolio.html" class="btn-primary-sm">← Back to Portfolio</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p style="color: var(--text-secondary);">&copy; 2026 Dr. Yousuf Mahomed | Newcastle, South Africa</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.querySelector('#mobile-menu');
+            const navList = document.querySelector('.nav-links');
+
+            if (menuBtn) {
+                menuBtn.onclick = () => {
+                    menuBtn.classList.toggle('active');
+                    navList.classList.toggle('active');
+                };
+            }
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.onclick = () => {
+                    menuBtn.classList.remove('active');
+                    navList.classList.remove('active');
+                };
+            });
+        });
+    </script>
+</body>
+</html>

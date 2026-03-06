@@ -6,29 +6,36 @@
     <title>Sales Coordination CRM Architecture | Dr. Yousuf Mahomed</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Lora:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/834304401a.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/Medicine Stethoscope.png">
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="nav-container">
-        <a href="index.html" class="logo">Dr. Yousuf Mahomed</a>
-        
-        <div class="menu-toggle" id="mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-stethoscope"></i> 
+                <span>Dr. Yousuf Mahomed</span>
+            </a>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-        <ul class="nav-links">
-            <li><a href="Medical_career.html">Medical Career</a></li>
-            <li><a href="salesforce.html" class="active">Salesforce</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="resume.html" class="btn-cta">Resume</a></li>
-            <li><a href="caseStudyRoster.html" class="btn-cta">Case Study</a></li>
-            <li><a href="insights.html">Insights</a></li>
-        </ul>
-    </div>
-</nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Medical_career.html">Medical Career</a></li>
+                <li><a href="salesforce.html" >Salesforce</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="caseStudyRoster.html" class="btn-cta">Case Study</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                 <li><a href="sales-crm-project.html" class="active">Current Project</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <header class="hero-centered">
         <div class="hero-text-centered">
@@ -39,85 +46,115 @@
         </div>
     </header>
 
-    <main class="container resume-grid">
-        
-        <section class="resume-section">
-            <h2 class="section-title">Project Overview</h2>
-            <div style="text-align: center;">
-                    <img src="/images/main org.jpg" alt="Validation Rule Logic" class="hero-img-small">
-                </div>
-            <div class="glass-card">
-                <p>This project demonstrates the architectural design of a custom Salesforce CRM for high-end auto shop sales. The objective was to design a secure environment utilizing a <strong>"Least Privilege"</strong> data model while automating the hand-off process between Appointment Setters and Sales Closers.</p>
+    <main class="container">
+        <div class="resume-grid">
+            <div class="resume-main">
                 
-                <div class="skill-tags" style="margin-top: 2rem;">
-                    <span>Salesforce Flow Builder</span>
-                    <span>Security & Visibility</span>
-                    <span>Data Governance</span>
-                    <span>Permission Sets</span>
-                    <span>Validation Rules</span>
+                <section class="resume-section">
+                    <h2 class="section-title">Project Overview</h2>
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <img src="/images/main org.jpg" alt="Salesforce Organization Overview" class="hero-img-small">
+                    </div>
+                    <div class="glass-card">
+                        <p>This project demonstrates the architectural design of a custom Salesforce CRM for high-end auto shop sales. The objective was to design a secure environment utilizing a <strong>"Least Privilege"</strong> data model while automating the hand-off process between Appointment Setters and Sales Closers.</p>
+                        
+                        <div class="skill-tags" style="margin-top: 2rem; justify-content: center;">
+                            <span>Salesforce Flow Builder</span>
+                            <span>Security & Visibility</span>
+                            <span>Data Governance</span>
+                            <span>Permission Sets</span>
+                            <span>Validation Rules</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="resume-section">
+                    <h2 class="section-title">Automation Intelligence</h2>
+                    <div class="glass-card">
+                        <p style="margin-bottom: 2.5rem; color: var(--text-secondary);">
+                            To bridge the gap between security and efficiency, I engineered a <strong>Record-Triggered Flow</strong> that manages the lead hand-off. When a setter marks a lead for review, the system automatically identifies the owner and fires a real-time push notification.
+                        </p>
+                        
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 3rem;">
+                            <div style="width: 100%;">
+                                <img src="/images/lead handoff flow .jpg" alt="Salesforce Flow Logic Canvas" class="hero-img-small" style="max-width: 800px;">
+                                <h4 style="color: var(--accent); margin-top: 1rem;">Architecting the Logic</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                                    The Flow triggers on Lead Status changes, retrieves notification metadata, and dynamically assigns recipients based on Record Ownership.
+                                </p>
+                            </div>
+                            
+                            <div style="width: 100%;">
+                                <img src="/images/lead pipeline.jpg" alt="Lead Status Path" class="hero-img-small" style="max-width: 800px;">
+                                <p class="caption" style="margin-top: 0.5rem; font-style: italic; color: var(--text-secondary);">The Front-End: Custom Lead Path with the 'Pending Closer Review' stage successfully integrated.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="resume-section">
+                    <h2 class="section-title">Security & Governance</h2>
+                    <div class="glass-card" style="text-align: left;">
+                        
+                        <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.3rem;">1. Role-Based Permission Sets</h3>
+                        <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">
+                            Financial fields are hidden at the profile level. Access is granted exclusively to "Sales Closers" via custom Permission Sets, ensuring sensitive margin data remains protected.
+                        </p>
+                        
+                        <div style="text-align: center; margin-bottom: 3.5rem;">
+                            <img src="/images/lead status picklist.jpg" alt="Picklist Configuration" class="hero-img-small">
+                            <p class="caption" style="font-size: 0.85rem; color: var(--text-secondary);">Backend Logic: Segmenting picklist values to cater specifically to Cold vs. Hot lead management.</p>
+                        </div>
+
+                        <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.3rem;">2. Process Guardrails</h3>
+                        <div style="text-align: center; margin-bottom: 2rem;">
+                            <img src="/images/dicount application.jpg" alt="Discount Authorization Logic" class="hero-img-small">
+                            <p class="caption" style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Data Integrity: Discount application is strictly restricted to Sales Managers via Validation Rules.</p>
+                        </div>
+                        
+                        <p style="margin-bottom: 2rem; color: var(--text-secondary);">
+                            To enforce data integrity, Validation Rules prevent Appointment Setters from bypassing the hand-off process, ensuring all high-value builds are reviewed by a manager.
+                        </p>
+
+                        <div style="text-align: center;">
+                            <img src="/images/custom notifications.jpg" alt="Custom Notification Setup" class="hero-img-small">
+                            <p class="caption" style="font-size: 0.85rem; color: var(--text-secondary);">UX Design: Custom notifications created to keep the Closer team informed without leaving the Lightning interface.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="resume-actions-centered" style="margin-top: 4rem;">
+                    <a href="portfolio.html" class="btn-primary-sm">← Back to Portfolio</a>
                 </div>
+
             </div>
-        </section>
-
-        <section class="resume-section">
-            <h2 class="section-title">Automation Intelligence</h2>
-            <div class="glass-card">
-                <p style="margin-bottom: 2rem; color: var(--text-secondary);">
-                    To bridge the gap between security and efficiency, I engineered a <strong>Record-Triggered Flow</strong> that manages the lead hand-off. When a setter marks a lead for review, the system automatically identifies the owner and fires a real-time push notification.
-                </p>
-                
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src="/images/lead handoff flow .jpg" alt="Salesforce Flow Logic Canvas" class="hero-img-small" style="max-width: 800px;">
-                    <h4 style="color: var(--accent); margin-top: 1rem;">Architecting the Logic</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); max-width: 650px; margin-bottom: 2rem;">
-                        <strong>Process:</strong> The Flow triggers when a Lead Status changes to 'Pending Closer Review'. It retrieves the Custom Notification metadata, assigns the Recipient ID (Record Owner), and executes the push action with a deep-link to the record.
-                    </p>
-                    
-                    <img src="/images/lead pipeline.jpg" alt="Lead Status Path" class="hero-img-small" style="max-width: 800px;">
-                    <p class="caption">The Front-End: Custom Lead Path with the 'Pending Closer Review' stage successfully integrated.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="resume-section">
-            <h2 class="section-title">Security & Governance</h2>
-            <div class="glass-card" style="text-align: left;">
-                
-                <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.3rem;">1. Role-Based Permission Sets</h3>
-                <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">
-                    Financial fields like <em>Final Quotation Price</em> and <em>Discount Amount</em> are hidden at the profile level. Access is granted exclusively to "Sales Closers" via custom Permission Sets, ensuring sensitive margin data remains protected.
-                </p>
-                
-                <div style="text-align: center; margin-bottom: 3rem;">
-                    <img src="/images/lead status picklist.jpg" alt="Permission Set Configuration" class="hero-img-small">
-                    <p class="caption">Adjustment of picklist to cater to cold and hot leads</p>
-                </div>
-
-                <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.3rem;">2. Process Guardrails</h3>
-                <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">
-                    <div style="text-align: center;">
-                    <img src="/images/dicount application.jpg" alt="Validation Rule Logic" class="hero-img-small">
-                    <p class="caption">Application of discounts as authorized by sales manager and not appointment setters</p>
-                </div>
-                    To enforce data integrity, a Validation Rule prevents Appointment Setters from bypassing the hand-off process. This ensures all high-value builds are reviewed by a manager before being finalized.
-                </p>
-
-                <div style="text-align: center;">
-                    <img src="/images/custom notifications.jpg" alt="Validation Rule Logic" class="hero-img-small">
-                    <p class="caption">Development of custom notifications for use in flow path.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="resume-actions-centered">
-            <a href="index.html" class="btn-primary-sm">← Back to Portfolio</a>
         </div>
-
     </main>
 
     <footer class="footer">
         <p style="color: var(--text-secondary);">&copy; 2026 Dr. Yousuf Mahomed | Newcastle, South Africa</p>
     </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.querySelector('#mobile-menu');
+        const navList = document.querySelector('.nav-links');
+
+        if (menuBtn) {
+            menuBtn.onclick = () => {
+                menuBtn.classList.toggle('active');
+                navList.classList.toggle('active');
+            };
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.onclick = () => {
+                menuBtn.classList.remove('active');
+                navList.classList.remove('active');
+            };
+        });
+    });
+    </script>
 
 </body>
 </html>

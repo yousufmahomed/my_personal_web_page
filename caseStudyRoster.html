@@ -18,14 +18,22 @@
                 <i class="fa-solid fa-stethoscope"></i> 
                 <span>Dr. Yousuf Mahomed</span>
             </a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Medical_career.html">Medical Career</a></li>
-                 <li><a href="salesforce.html">Salesforce</a></li>
+                <li><a href="salesforce.html">Salesforce</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
-                 <li><a href="insights.html" class="active">Insights</a></li>
                 <li><a href="resume.html">Resume</a></li>
-                 <li><a href="insights.html">Project</a></li>
+                <li><a href="caseStudyRoster.html" class="active">Case Study</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                 <li><a href="sales-crm-project.html">Current Project</a></li>
             </ul>
         </div>
     </nav>
@@ -49,7 +57,7 @@
                     <p class="profile-summary">
                         In our district, identifying the specific doctor on night call was a persistent bottleneck. While traditional methods like Google Sheets or scanned PDFs were considered, they failed to provide the **real-time accessibility** and **single source of truth** required for high-stakes medical staffing.
                     </p>
-                    <img src="images/mph landing page.jpg" alt="Roster System Dashboard" class="hero-img-small">
+                    <img src="images/mph landing page.jpg" alt="Roster System Dashboard" class="hero-img-small" style="margin-top: 2rem;">
                 </section>
 
                 <section class="resume-section">
@@ -57,10 +65,16 @@
                     <p class="profile-summary" style="margin-bottom: 2rem;">
                         The project followed a rigorous **Agile methodology**, prioritizing stakeholder input and iterative refactoring to ensure the final product was shaped by actual clinical requirements.
                     </p>
+                    
+                    
+
+[Image of the Software Development Life Cycle agile methodology]
+
+                    
                     <img src="images/sdlc image.jpg" alt="Software Development Lifecycle" class="hero-img-small">
                     
                     <div class="glass-card" style="text-align: left; margin-top: 2rem;">
-                        <ul class="contact-list" style="align-items: flex-start; text-align: left; gap: 15px;">
+                        <ul class="contact-list" style="align-items: flex-start; text-align: left; gap: 15px; list-style: none; padding: 0;">
                             <li><i class="fa-solid fa-comments" style="color: var(--accent);"></i> <strong>Stakeholder Input:</strong> Gathering requirements from district HODs and management.</li>
                             <li><i class="fa-solid fa-flask-vial" style="color: var(--accent);"></i> <strong>Beta Testing:</strong> Real-world testing with clinicians to identify UI friction points.</li>
                             <li><i class="fa-solid fa-code-merge" style="color: var(--accent);"></i> <strong>Technical Agility:</strong> Managed various logic branches via GitHub for seamless refactoring.</li>
@@ -71,26 +85,26 @@
                 <section class="resume-section glass-card">
                     <h2 class="section-title">Institutional Resilience</h2>
                     <p class="profile-summary">
-                        While the solution was highly regarded by clinical leadership, the primary hurdle was navigating a slow-moving government bureaucracy. Although administrative inertia prevented official adoption, the platform exists as a high-fidelity proof-of-concept for modernizing healthcare staffing.
+                        While the solution was highly regarded by clinical leadership, the primary hurdle was navigating slow-moving administrative systems. Although inertia prevented full official adoption, the platform serves as a high-fidelity proof-of-concept for modernizing healthcare staffing.
                     </p>
-                    <img src="images/mph landing mobile.jpg" alt="Mobile View Responsiveness" class="hero-img-small" style="max-width: 300px;">
+                    <img src="images/mph landing mobile.jpg" alt="Mobile View Responsiveness" class="hero-img-small" style="max-width: 300px; margin-top: 2rem;">
                     <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-secondary);">Optimized for "on-the-go" clinical use across the district.</p>
                 </section>
 
-                
-                <div class="resume-actions-centered">
+                <div class="resume-actions-centered" style="margin-bottom: 4rem;">
                     <a href="https://rosterproject.netlify.app/" class="btn-primary-sm" target="_blank">View Live Technical Project <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; margin-left: 5px;"></i></a>
                 </div>
+
                 <section class="resume-section glass-card" style="border-top: 4px solid var(--accent-alt);">
                     <h2 class="section-title">Phase 2: The Notion ED Engine</h2>
                     <p class="profile-summary">
                         Applying the same architectural logic, I developed a secondary, highly complex **Electronic Emergency Department Roster** via Notion. This manages granular departmental staffing and remains an active tool in my management toolkit today.
                     </p>
-                    <img src="images/notion page.jpg" alt="Notion ED Roster Interface" class="hero-img-small">
+                    <img src="images/notion page.jpg" alt="Notion ED Roster Interface" class="hero-img-small" style="margin-top: 2rem;">
                     
                     <div style="margin-top: 1.5rem;">
                         <a href="https://groovy-universe-6f5.notion.site/A-E-Call-Rosters-2181d515a4ab80128ab1dd6302a49da1?source=copy_link" 
-                           class="btn-secondary" 
+                           class="btn-primary-sm" 
                            target="_blank" 
                            style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">
                            <i class="fa-solid fa-up-right-from-square"></i> Explore Notion Engine
@@ -103,8 +117,28 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 Dr. Yousuf Mahomed | Health-Tech Systems</p>
+        <p style="color: var(--text-secondary);">&copy; 2026 Dr. Yousuf Mahomed | Health-Tech Systems</p>
     </footer>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.querySelector('#mobile-menu');
+        const navList = document.querySelector('.nav-links');
+
+        if (menuBtn) {
+            menuBtn.onclick = () => {
+                menuBtn.classList.toggle('active');
+                navList.classList.toggle('active');
+            };
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.onclick = () => {
+                menuBtn.classList.remove('active');
+                navList.classList.remove('active');
+            };
+        });
+    });
+    </script>
 </body>
 </html>
