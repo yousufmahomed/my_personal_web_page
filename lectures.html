@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectures & Training | Dr. Yousuf Mahomed</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/834304401a.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/Medicine Stethoscope.png">
+    <link rel="stylesheet" href="main.css">
+    
+    <style>
+                /* --- Optimized Responsive Video Container --- */
+        .video-wrapper {
+            width: 100%;
+            aspect-ratio: 16 / 9; /* Modern replacement for the padding-bottom hack */
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--glass-border);
+            overflow: hidden;
+            position: relative;
+            
+            /* Forces the browser to render this on its own layer, 
+            preventing glass-blur interference */
+            transform: translateZ(0); 
+            background: #000; /* Fallback color while loading */
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .lecture-card {
+            text-align: left;
+            margin-bottom: 2.5rem;
+        }
+
+        .lecture-card h3 {
+            color: var(--accent);
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-stethoscope"></i> 
+                <span>Dr. Yousuf Mahomed</span>
+            </a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Medical_career.html">Medical Career</a></li>
+                <li><a href="lectures.html" class="active">Lectures</a></li>
+                <li><a href="salesforce.html">Salesforce</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="caseStudyRoster.html" class=>Case Study</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                 <li><a href="insights.html">Insights</a></li>
+                <li><a href="sales-crm-project.html">Current Project</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-centered">
+        <div class="hero-text-centered">
+            <h1>Medical <span class="highlight">Lecturer</span> & Clinical Trainer</h1>
+            <p>Sharing clinical insights through evidence-based teaching and hands-on training.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="resume-grid">
+            
+            <section class="resume-section glass-card lecture-card">
+                <h2 class="section-title">Emergency Medicine Fundamentals</h2>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/uBNbX2X1Jfk?si=m0RxFmP4UQuvBYiv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <h3>Foundational Training</h3>
+                <p>An introductory session designed for junior medical officers and interns, focusing on core stabilization protocols in the Emergency Department.</p>
+            </section>
+
+            <section class="resume-section glass-card lecture-card">
+                <h2 class="section-title">Difficult Case Analysis</h2>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OdhdkwR7I04?si=3OV6_6qwsV5M16PR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <h3>Clinical Reasoning</h3>
+                <p>A deep dive into complex clinical presentations, utilizing data management and differential diagnosis to solve "high-stakes" medical puzzles[cite: 70, 72].</p>
+            </section>
+
+            <section class="resume-section glass-card lecture-card">
+                <h2 class="section-title">POCUS & Ultrasound Mastery</h2>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/GIHeUFkGw7Y?si=Y02lE3F9pjhM7bpr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <h3>Advanced Procedures</h3>
+                <p>Showcasing Point-of-Care Ultrasound (POCUS) techniques to improve diagnostic speed and accuracy in emergency procedures[cite: 73, 74].</p>
+            </section>
+            <section class="resume-section glass-card lecture-card">
+                <h2 class="section-title">Clinical Skills: Foreign Body Removal</h2>
+                <div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/V0EA_BpasiA?si=kvsnD3IeZJAOPLmN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                </div>
+                <h3>Emergency Room Procedures</h3>
+                <p>A practical demonstration of non-invasive techniques for nasal foreign body removal, emphasizing patient comfort and the "Mother’s Kiss" or instrumental techniques used in acute settings.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="mailto:yousufmahomed@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://wa.me/+27824949750" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/yousuf-mahomed-3b915a40" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2026 Dr. Yousuf Mahomed | Newcastle, South Africa</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.querySelector('#mobile-menu');
+            const navList = document.querySelector('.nav-links');
+            if (menuBtn) {
+                menuBtn.onclick = () => {
+                    menuBtn.classList.toggle('active');
+                    navList.classList.toggle('active');
+                };
+            }
+        });
+    </script>
+</body>
+</html>
