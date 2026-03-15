@@ -382,3 +382,117 @@ a:hover { color: #fff; text-decoration: none; }
         display: flex !important; /* Force the triple lines to show on mobile */
     }
 }
+
+/* --- Medical Writing Gallery Grid --- */
+.gallery-section {
+    padding: 2rem 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+
+.gallery-item {
+    background: var(--surface);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover {
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 242, 254, 0.15);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item::after {
+    content: '\f00e'; /* FontAwesome Magnifying Glass */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: var(--bg-dark);
+    background: var(--accent);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.gallery-item:hover::after {
+    opacity: 0.9;
+}
+
+/* --- Lightbox / Modal Styling --- */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 10000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(5, 10, 20, 0.95); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    overflow: auto; 
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 12px;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 40px rgba(0, 242, 254, 0.3);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {transform: scale(0.8); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: var(--text-secondary);
+    font-size: 40px;
+    font-weight: bold;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: var(--accent);
+    text-decoration: none;
+}
